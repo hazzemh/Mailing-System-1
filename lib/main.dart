@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mailing_system/inboxPage.dart';
+import 'package:mailing_system/AppViews/inboxPage.dart';
 
 void main() {
   runApp(const MyApp());
