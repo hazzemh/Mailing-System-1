@@ -50,8 +50,8 @@ class InboxPage extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(children: const [
-        Text("Inbox"),
+      body: Column(children: [
+        const Text("Inbox"),
       ]),
     );
   }
