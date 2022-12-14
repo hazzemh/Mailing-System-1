@@ -42,11 +42,7 @@ class inboxPage extends StatelessWidget {
           
         ],  
       ),
-      body: Column(children: [
-        const Text("Inbox"),
-      ]),
+     
     );
   }
 }
-
-//Azzaaam
