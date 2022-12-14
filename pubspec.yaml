@@ -27,13 +27,16 @@ flutter:
   uses-material-design: true
 
   assets:
-  - assets/fonts/
+   - assets/fonts/
 
   fonts:
-    - family: Cabin
-      fonts:
-        - asset: assets/fonts/Cabin-Regular.ttf
-       
+  - family: MyFlutterApp
+    fonts:
+      - asset: assets/custom_icons/MyFlutterApp.ttf
+fonts:
+  - family: Cabin
+    fonts:
+      - asset: assets/fonts/Cabin-Regular.ttf
   
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
