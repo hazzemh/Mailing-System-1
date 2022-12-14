@@ -54,10 +54,10 @@ class inboxPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(width: width/18),
-              CircleAvatar(backgroundImage: NetworkImage('https://lh3.googleusercontent.com/a/AEdFTp7HB1ZjlorTV0wExaxhYEFjVlpn5ODkxRXx6aSHnw=s288-p-rw-no'),radius: 32,),
+              CircleAvatar(backgroundImage: NetworkImage('https://lh3.googleusercontent.com/a/AEdFTp7HB1ZjlorTV0wExaxhYEFjVlpn5ODkxRXx6aSHnw=s288-p-rw-no'),radius: 30,),
               SizedBox(width: width/2,),
-              IconButton(onPressed: (){}, icon: Icon(Icons.search, color: Colors.black, size: 35,)),  
-              Badge(position: BadgePosition.topEnd(top: 10, end: 5),badgeContent: Icon(Icons.circle ,color: Colors.red, size: 4,),child: IconButton(onPressed: (){}, icon: Icon(Icons.calendar_month, color: Colors.black, size: 35,))),
+              IconButton(onPressed: (){}, icon: Icon(Icons.search, color: Colors.black, size: 30,)),  
+              Badge(position: BadgePosition.topEnd(top: 10, end: 10),badgeContent: Icon(Icons.circle ,color: Colors.red, size: 2,),child: IconButton(onPressed: (){}, icon: Icon(Icons.calendar_month, color: Colors.black, size: 30,))),
             ],
           ),
           
