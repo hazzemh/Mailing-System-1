@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class SharedIcons{
   static const _kFontFam='MyFlutterApp';
   static const String? _kFontPkg = null;
