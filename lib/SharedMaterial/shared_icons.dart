@@ -12,4 +12,8 @@ class SharedIcons{
   static const IconData trash = IconData(0xf1f8, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData twitterCircled = IconData(0xf30a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData mailBulk = IconData(0xf674, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData feather = IconData(0xf52d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData featherAlt = IconData(0xf56b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData feather_1 = IconData(0xe809, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData feather_2 = IconData(0xe80a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
