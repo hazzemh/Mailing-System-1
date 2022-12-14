@@ -16,4 +16,5 @@ class SharedIcons{
   static const IconData featherAlt = IconData(0xf56b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData feather_1 = IconData(0xe809, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData feather_2 = IconData(0xe80a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  
 }
