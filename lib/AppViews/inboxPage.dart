@@ -50,6 +50,26 @@ class _inboxPageState extends State<inboxPage> {
 
       //   ],
       // ),
+      // Column(
+      //   crossAxisAlignment: CrossAxisAlignment.start,
+      //   mainAxisAlignment: MainAxisAlignment.start,
+      //   children: [
+      //     SizedBox(height: height/18),
+      //     Row(
+      //       mainAxisAlignment: MainAxisAlignment.start,
+      //       children: [
+      //         SizedBox(width: width/18),
+      //         CircleAvatar(backgroundImage: NetworkImage('https://lh3.googleusercontent.com/a/AEdFTp7HB1ZjlorTV0wExaxhYEFjVlpn5ODkxRXx6aSHnw=s288-p-rw-no'),radius: 30, backgroundColor: Color.fromARGB(255,239,239,239), child: IconButton(icon: Icon(color: Colors.transparent, Icons.person), onPressed: (){},)),
+      //         SizedBox(width: width/2,),
+      //         IconButton(onPressed: (){}, icon: Icon(Icons.search, color: Colors.black, size: 30,), splashRadius: 25),  
+      //         Badge(position: BadgePosition.topEnd(top: 10, end: 10),badgeContent: Icon(Icons.circle ,color: Color.fromARGB(255,212,64,64), size: 2,),child: IconButton(onPressed: (){}, icon: Icon(Icons.calendar_month, color: Colors.black, size: 30,), splashRadius: 25)),
+      //       ],
+      //     ),
+      //     SizedBox(height: height/10),
+      //     DropdownButton(items: null, onChanged: null, hint: Text("Inbox", style: TextStyle(color: Colors.black, fontSize: 40, fontWeight: FontWeight.bold)),),
+          
+      //   ],  
+      // ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,46 +81,23 @@ class _inboxPageState extends State<inboxPage> {
               children: [
                 SizedBox(width: width / 18),
                 // ignore: prefer_const_constructors
-                CircleAvatar(
-                  backgroundImage: NetworkImage(
-                      'https://lh3.googleusercontent.com/a/AEdFTp7HB1ZjlorTV0wExaxhYEFjVlpn5ODkxRXx6aSHnw=s288-p-rw-no'),
-                  radius: 32,
-                ),
+                CircleAvatar(backgroundImage: NetworkImage('https://lh3.googleusercontent.com/a/AEdFTp7HB1ZjlorTV0wExaxhYEFjVlpn5ODkxRXx6aSHnw=s288-p-rw-no'),radius: 30, backgroundColor: Color.fromARGB(255,239,239,239), child: IconButton(icon: Icon(color: Colors.transparent, Icons.person), onPressed: (){},)),
                 SizedBox(
                   width: width / 2,
                 ),
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.search,
-                      color: Colors.black,
-                      size: 35,
-                    )),
-                Badge(
-                    position: BadgePosition.topEnd(top: 10, end: 5),
-                    badgeContent: Icon(
-                      Icons.circle,
-                      color: Colors.red,
-                      size: 4,
-                    ),
-                    child: IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          Icons.calendar_month,
-                          color: Colors.black,
-                          size: 35,
-                        ))),
+               IconButton(onPressed: (){}, icon: Icon(Icons.search, color: Colors.black, size: 30,), splashRadius: 25),
+                Badge(position: BadgePosition.topEnd(top: 10, end: 10),badgeContent: Icon(Icons.circle ,color: Color.fromARGB(255,212,64,64), size: 2,),child: IconButton(onPressed: (){}, icon: Icon(Icons.calendar_month, color: Colors.black, size: 30,), splashRadius: 25)),
               ],
             ),
             SizedBox(
-              height: height / 16,
+              height: height / 64,
             ),
             Container(
-              padding: EdgeInsets.only(left: width / 12),
+              padding: EdgeInsets.only(left: width / 24,),
               child: DropdownButton(
-                icon: Icon(Icons.keyboard_double_arrow_down_sharp,
-                    color: Colors.black),
-                items: const ["All Inboxes", "Drafts", "Trash", "Sent"]
+                icon: Icon(Icons.arrow_drop_down,
+                    color: Colors.black, size: 30,),
+                items: const ["Inbox", "Drafts", "Trash", "Sent"]
                     .map((e) => DropdownMenuItem(
                           child: Text("$e"),
                           value: e,
@@ -113,18 +110,42 @@ class _inboxPageState extends State<inboxPage> {
                 },
                 onTap: null,
                 hint: Text(
-                  'All Inboxes',
+                  'Inbox',
                   style: TextStyle(
+                      fontFamily: "Cabin-Bold.tff",
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 40,
                       backgroundColor: Colors.white.withOpacity(0.0)),
                 ),
               ),
             ),
-            SizedBox(
-              height: height / 26,
+            Padding(
+              padding: EdgeInsets.only(left: width / 24,),
+              child: Text("Unread Messages Counter : "),
             ),
+             SizedBox(
+              height: height / 64,
+            ),
+            Padding(
+              padding: EdgeInsets.only(left: width/12),
+              child: Row( children: [
+                CircleAvatar(backgroundColor: Colors.white,radius: 30,child: IconButton(icon: Icon(Icons.drafts), onPressed: (){}, iconSize: 40,)),
+                SizedBox(width: width/64,),
+                CircleAvatar(backgroundColor: Colors.white,radius: 30,child: IconButton(icon: Icon(Icons.folder), onPressed: (){}, iconSize: 40,)),
+                SizedBox(width: width/64,),
+                CircleAvatar(backgroundColor: Colors.white,radius: 30,child: IconButton(icon: Icon(Icons.folder_delete), onPressed: (){}, iconSize: 40,)),
+                SizedBox(width: width/64,),
+                CircleAvatar(backgroundColor: Colors.white,radius: 30,child: IconButton(icon: Icon(Icons.folder_special), onPressed: (){}, iconSize: 40,)),
+                SizedBox(width: width/64,),
+                CircleAvatar(backgroundColor: Colors.white,radius: 30,child: IconButton(icon: Icon(Icons.person), onPressed: (){}, iconSize: 40,)),
+                //CircleAvatar(backgroundColor: Colors.white,radius: 30,child: TextButton(,onPressed: (){}, child: IconButton(icon: Icon(Icons.person), onPressed: (){}, iconSize: 40,)))
+              ],),
+            ),
+            SizedBox(
+              height: height / 32,
+            ),
+            //hena el item builder
             Card(
               child: ListTile(
                 leading: IconButton(
